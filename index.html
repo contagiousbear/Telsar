@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Telsar File Converter</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/jquery.scrollbar.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<script>
+		window.$ = window.jQuery = require('./js/jquery.min.js')
+		window.Hammer = require('./js/hammer.min.js')
+	</script>
+</head>
+
+<body>
+
+	<div id="windowBar" class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper materialDarkPrim">
+				<ul class="right windows">
+					<li><a href="javascript:;" id="min-btn"><i class="material-icons">remove</i></a></li>
+					<li><a href="javascript:;" id="max-btn"><i class="material-icons">add</i></a></li>
+					<li><a href="javascript:;" id="close-btn"><i class="material-icons">close</i></a></li>
+				</ul>
+				<div id="drag"></div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper materialPrim center-align">
+				<span class="flow-text">Telsar File Converter</span>
+			</div>
+		</nav>
+	</div>
+	<div id="conver" class="modal">
+		<div class="modal-content">
+			<div class="progress">
+				<div id="progress" class="determinate"></div>
+			</div>
+			<div id="progressNum">0%</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" onclick="killConver()" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="scrollbar-chrome foo">
+			<div class="container">
+				<div class="card-panel white">
+					<div class="container">
+						<span class="flow-text flowTextTweak">File Selection & Output</span>
+						<br>
+						<div class="row">
+							<div class="file-field input-field">
+								<div class="btn materialAccent" onclick="selectFile()">
+									<span>Input</span>
+								</div>
+								<div class="file-path-wrapper">
+									<input disabled id="inputPath" class="file-path validate" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="file-field input-field">
+								<div id="output" class="btn materialAccent disabled">
+									<span>Output</span>
+								</div>
+								<div class="file-path-wrapper">
+									<input disabled id="outputPath" class="file-path validate" type="text">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="card-panel white">
+					<div class="container">
+						<span class="flow-text flowTextTweak">Video & Audio Settings</span>
+						<br>
+						<br>
+						<div class="row">
+							<div class="input-field col s6">
+								<input placeholder="00:00:00 or 00:00" value="00:00:00" id="time" type="text" class="validate" maxlength="8">
+								<label for="time">Start Time</label>
+							</div>
+							<div class="input-field col s6">
+								<select id="formatSelect">
+									<option selected value="mp4">mp4</option>
+									<option value="webm">webm</option>
+								</select>
+								<label>Output File</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6">
+								<select id="qualitySelect">
+									<option selected value="low">low</option>
+									<option value="medium">medium</option>
+									<option value="high">high</option>
+								</select>
+								<label>Quality</label>
+							</div>
+							<div class="input-field col s6">
+								<select id="frames">
+									<option selected value="30">30 FPS</option>
+									<option value="60">60 FPS</option>
+								</select>
+								<label>Frames</label>
+							</div>
+							<div class="input-field col s6">
+								<select id="resolution">
+									<option selected value="360">360p</option>
+									<option value="480">480p</option>
+									<option value="720">720p</option>
+								</select>
+								<label>Resolution</label>
+							</div>
+							<div class="input-field col s6">
+								<div class="switch">
+									<label>
+										<span class="flow-text">Audio</span>
+										<input id="volume" type="checkbox" checked="checked">
+										<span class="lever"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="right-align">
+								<button class="btn waves-effect materialAccent waves-light" onclick="submit()">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script rel="javascript" src="./js/jquery.min.js"></script>
+	<script rel="javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.10/jquery.scrollbar.min.js"></script>
+	<script rel="javascript" src="./js/main.js"></script>
+	<script rel="javascript" src="./js/winBtns.js"></script>
+
+</body>
+
+</html>

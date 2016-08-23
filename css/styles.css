@@ -1,0 +1,59 @@
+body {
+    background-color: #eeeeee;
+}
+.navbar-fixed {
+    margin-bottom: 15px;
+}
+.flowTextTweak {
+    margin-left: -12px;
+}
+.windows> li> a> .material-icons {
+    font-size: 18px !important;
+}
+#windowBar> nav> .nav-wrapper> .windows {
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -14px;
+}
+#windowBar {
+    height: 22px;
+}
+#windowBar> nav {
+    background-color: #03A9F4 !important;
+}
+#drag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: calc(100% - 3 * 45px);
+    -webkit-app-region: drag;
+}
+#content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    height: calc(100vh - 105px);
+    width: 100%;
+}
+.materialPrim {
+    background-color: #03A9F4 !important;
+}
+.materialDarkPrim {
+    background-color: #0288D1 !important;
+}
+.materialAccent {
+    background-color: #FF5252 !important;
+}
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #FF5252 !important;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #FF5252 !important;
+}
+.foo {
+    height: calc(100vh - 105px);
+}
